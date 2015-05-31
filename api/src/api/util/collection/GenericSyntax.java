@@ -1,4 +1,4 @@
-package api.uti.collection;
+package api.util.collection;
 /*
 /*
 제네릭(generics) 

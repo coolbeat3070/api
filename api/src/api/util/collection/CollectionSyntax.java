@@ -1,4 +1,4 @@
-package api.uti.collection;
+package api.util.collection;
 
 import java.util.HashMap;
 import java.util.Map;

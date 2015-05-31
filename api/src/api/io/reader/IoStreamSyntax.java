@@ -18,7 +18,10 @@ Program 출력데이터 => (출력스트림)=>모니터, 디스크, 네트웍 (D
  * */
 /*
 Byte 기반 스트림 : 입출력 단위가 1 byte 
-InputStream, OutputStream
+InputStream, OutputStream : 기본 입출력 스트림, 한글처리 불가능
+BufferedInputStrea, BufferedOutputStrea : 버퍼기능 확대
+FileInputSteam, FileOutputSteam 
+DataInputStream, DataOutputStream : 데이터 타입을 지정해서 입출력
  * */
 /*
 문자 기반 스트림 : char 가 2byte 이므로, 문자데이터
