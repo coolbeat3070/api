@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class GradeDemo {
 	public static void main(String[] args) {
-		Map map = new HashMap();
+		Map<String,Integer> map = new HashMap<String,Integer>();
 		
 		map.put("김연아", new Integer(98));
 		map.put("아사다 마오", new Integer(55));

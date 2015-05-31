@@ -1,4 +1,4 @@
-package api.util.hashset;
+package api.util.hashSet;
 
 import java.util.Collections;
 import java.util.HashSet;

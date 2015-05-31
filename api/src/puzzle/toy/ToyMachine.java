@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Vector;
 
 public class ToyMachine {
-	private Vector<Toy> toys;
-    private Toy toy;
+	private Vector<ToyVO> toys;
+    private ToyVO toy;
    
     /**생성자*/
     public ToyMachine(){
@@ -17,14 +17,14 @@ public class ToyMachine {
          toys = new Vector<>(capa, increment);
     }
     public void regist(String name, int price, ToySpec spec){
-         Toy toy = new Toy(name,price,spec);
+         ToyVO toy = new ToyVO(name,price,spec);
          toys.addElement(toy);
     }
-    public Vector<Toy> searchName(String name){
-         Vector<Toy>catchToys = new Vector<Toy>();
+    public Vector<ToyVO> searchName(String name){
+         Vector<ToyVO>catchToys = new Vector<ToyVO>();
          for (int i = 0; i < toys.size(); i++) {
              
-              while (toy instanceof Toy) {
+              while (toy instanceof ToyVO) {
                    if (toy.getName().equalsIgnoreCase(name)) {
                         catchToys.add(toy);
                    }
@@ -33,11 +33,11 @@ public class ToyMachine {
          }
          return catchToys;
     }
-    public List<Toy> searchSpec(ToySpec searchSpec){
-         List<Toy>catchToys = new ArrayList<Toy>();
-         Enumeration<Toy>e = toys.elements();
+    public List<ToyVO> searchSpec(ToySpec searchSpec){
+         List<ToyVO>catchToys = new ArrayList<ToyVO>();
+         Enumeration<ToyVO>e = toys.elements();
          while (e.hasMoreElements()) {
-              Toy toy = (Toy) e.nextElement();
+              ToyVO toy = (ToyVO) e.nextElement();
               ToySpec toySpec = toy.getSpec();
               if (toySpec.equals(searchSpec)) {
                    catchToys.add(toy);
@@ -45,21 +45,9 @@ public class ToyMachine {
          }
          return catchToys;
     }
-    public List<Toy> getAll(){
+    public List<ToyVO> getAll(){
          return toys;
     }
    
-    public static void main(String[] args) {
-        
-    	ToyMachine c = new ToyMachine();
-         ToySpec spec = new ToySpec();
-         spec.setProperty("사용자", ToyUser.ADULT);
-         spec.setProperty("타입", ToyType.FIGURE);
-        
-         c.regist("스파이더맨", 5000, spec);
-         List<Toy> list = c.getAll();
-         for (Toy toy : list) {
-              System.out.println(toy);
-         }
-    }
+   
 }

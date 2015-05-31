@@ -1,4 +1,4 @@
-package api.util.hashset;
+package api.util.hashSet;
 /*
 java.util.HashSet
 - Set 인터페이스를 구현한 가장 대표적인 컬렉션

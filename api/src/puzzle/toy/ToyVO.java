@@ -1,11 +1,13 @@
 package puzzle.toy;
 
-public class Toy {
+public class ToyVO {
 	String name ;
     int price;
     ToySpec spec;
-    public Toy (){}
-    public Toy (String name, int price, ToySpec spec){
+    public ToyVO (){
+    	this("",0,null);
+    }
+    public ToyVO (String name, int price, ToySpec spec){
          this.name = name;
          this.price = price;
          this.spec = spec;
